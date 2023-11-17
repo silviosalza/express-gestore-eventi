@@ -9,7 +9,8 @@ function index(req,res){
 
     res.format({
         default: () => {
-            events = Event.getEvent();
+        
+            events = Event.getAllEvent();
             res.json(events);
         },
       });
@@ -35,17 +36,30 @@ function store(req, res) {
     }
 
 function show(req,res){
-    const eventId = req.params.id;
-    const event = eventArray.find((event) => event.id == eventId);
-
-    if (!event) {
-        res.status(404).send(`Evento con slug ${eventId} non trovato`);
-        return;
-      }
+    res.format({
+        default: () => {
+          try {
+            const events = Event.getAllEvent();
+            const eventId = parseInt(req.params.id);
     
-      res.json(event);
+            if (isNaN(eventId)) {
+              throw new Error("ID non valido");
+            }
+    
+            const singleEvent = events.find((event) => event.id === eventId);
+    
+            if (!singleEvent) {
+              throw new Error(`Evento con ID ${eventId} non trovato`);
+            }
+    
+            res.json(singleEvent);
+          } catch (error) {
+            res.status(404).send(error.message);
+          }
+        },
+      });
+    }
 
-}
 function update(req,res){
 
     const eventId = req.params.id;

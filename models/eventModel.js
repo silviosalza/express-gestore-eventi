@@ -10,7 +10,7 @@ class Event {
       this.date = date;
       this.maxSeats = maxSeats;
     }
-    static getEvent() {
+    static getAllEvent() {
         const filePath = path.resolve(__dirname, '..', 'db', 'db.json');
     
         try {

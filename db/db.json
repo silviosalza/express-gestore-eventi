@@ -1,20 +1,23 @@
 [
   {
+    "id": 0
+  },
+  {
     "id": 1,
-    "title": "primo evento",
-    "description": "primo evento",
-    "date": "29 Febbraio 2024",
-    "maxSeats": 10
+    "title": "terzo evento",
+    "description": "terzo evento",
+    "date": "domani",
+    "maxSeats": "12"
   },
   {
     "id": 2,
-    "title": "secondo evento",
-    "description": "secondo evento",
-    "date": "29 Febbraio 2024",
-    "maxSeats": 10
+    "title": "terzo evento",
+    "description": "terzo evento",
+    "date": "domani",
+    "maxSeats": "12"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "terzo evento",
     "description": "terzo evento",
     "date": "domani",
@@ -22,41 +25,6 @@
   },
   {
     "id": 4,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
-    "maxSeats": "12"
-  },
-  {
-    "id": 4,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
-    "maxSeats": "12"
-  },
-  {
-    "id": 5,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
-    "maxSeats": "12"
-  },
-  {
-    "id": 6,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
-    "maxSeats": "12"
-  },
-  {
-    "id": 7,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
-    "maxSeats": "12"
-  },
-  {
-    "id": 8,
     "title": "terzo evento",
     "description": "terzo evento",
     "date": "domani",
