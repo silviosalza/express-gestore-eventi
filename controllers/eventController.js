@@ -1,6 +1,7 @@
 const path = require("path");
 const { log } = require("console");
 const fs = require("fs");
+const eventArray = require("../db/db.json");
 
 
 function index(req,res){
@@ -20,7 +21,7 @@ function index(req,res){
       return;
     }
 
-    function store(req, res) {
+function store(req, res) {
         res.format({
             html: () => {
               
@@ -34,9 +35,31 @@ function index(req,res){
             },
           });
           return;
+    }
+
+function show(req,res){
+    const eventSlug = req.params.slug;
+    const event = eventArray.find((event) => event.slug == eventSlug);
+
+    if (!event) {
+        res.status(404).send(`Evento con slug ${eventSlug} non trovato`);
+        return;
       }
+    
+      res.json(event);
+
+}
+function update(req,res){
+
+        
+          return;
+        }
+
+
 
     module.exports = {
         index,
-        store
+        store,
+        update,
+        show
       };
