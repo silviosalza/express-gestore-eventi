@@ -4,7 +4,7 @@ const eventArray = require("../db/db.json")
 
 class Event {
     constructor(id, title, description, date, maxSeats) {
-      this.id = id;
+      this.id = (eventArray[eventArray.length - 1].id + 1);
       this.title = title;
       this.description = description;
       this.date = date;
@@ -16,6 +16,7 @@ class Event {
         try {
           const fileData = fs.readFileSync(filePath, 'utf8');
           const events = JSON.parse(fileData);
+          console.log(events);
           return events;
 
         } catch (error) {

@@ -8,15 +8,9 @@ const Event = require('../models/eventModel')
 function index(req,res){
 
     res.format({
-        html: () => {
-          
-          res.type("html").send("Index funziona");
-        },
-        json: () => {
-          res.type("json").send("Index funziona");
-        },
         default: () => {
-          res.status(406).send("Not Acceptable");
+            Event.getEvent();
+            res.type("html").send("Index funziona");
         },
       });
       return;
@@ -24,32 +18,20 @@ function index(req,res){
 
 
 function store(req, res) {
-
-    const eventData = req.body;
-    const newEvent = new Event(eventData.id, eventData.title, eventData.description, eventData.date, eventData.maxSeats)
-
-    try{
-        Event.saveEvent(newEvent);
-        res.send('Evento salvato')
-    } catch(error){
-        res.send("Errore durante il salvataggio")
-    }
-    
-
-
-        // res.format({
-        //     html: () => {
-              
-        //       res.type("html").send("store funziona");
-        //     },
-        //     json: () => {
-        //       res.type("json").send("store funziona");
-        //     },
-        //     default: () => {
-        //       res.status(406).send("Not Acceptable");
-        //     },
-        //   });
-
+    res.format({
+        default: () => {
+            const eventData = req.body;
+            const newEvent = new Event(eventData.id, eventData.title, eventData.description, eventData.date, eventData.maxSeats)
+        
+            try{
+                Event.saveEvent(newEvent);
+                res.send('Evento salvato')
+            } catch(error){
+                res.send("Errore durante il salvataggio")
+            }
+        },
+      });
+      return;
     }
 
 function show(req,res){
