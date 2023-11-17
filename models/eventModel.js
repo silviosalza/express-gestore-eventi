@@ -23,14 +23,14 @@ class Event {
         }
       }
 
-      static saveEvent(){
+      static saveEvent(newEvent){
 
         const filePath = path.resolve(__dirname, '..', 'db', 'db.json');
         try {
             const fileData = fs.readFileSync(filePath, 'utf8');
             const events = JSON.parse(fileData);
       
-            events.push(eventArray);
+            events.push(newEvent);
       
             fs.writeFileSync(filePath, JSON.stringify(events, null, 2), 'utf8');
             console.log('evento salvato');
