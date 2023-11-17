@@ -22,6 +22,7 @@ function index(req,res){
       return;
     }
 
+
 function store(req, res) {
         res.format({
             html: () => {
@@ -72,5 +73,5 @@ function update(req,res){
         index,
         store,
         update,
-        show
+        show,
       };
