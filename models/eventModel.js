@@ -7,7 +7,7 @@ class Event {
       this.id = (eventArray[eventArray.length - 1].id + 1);
       this.title = title;
       this.description = description;
-      this.date = date;
+      this.date = new Date(date);
       this.maxSeats = maxSeats;
     }
     static getAllEvent() {

@@ -1,33 +1,30 @@
 [
   {
-    "id": 0
-  },
-  {
     "id": 1,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
+    "title": "primo evento",
+    "description": "primo evento",
+    "date": "2023-11-17",
     "maxSeats": "12"
   },
   {
     "id": 2,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
+    "title": "secondo evento",
+    "description": "secondo evento",
+    "date": "2023-12-17",
     "maxSeats": "12"
   },
   {
     "id": 3,
     "title": "terzo evento",
     "description": "terzo evento",
-    "date": "domani",
+    "date": "2023-12-25",
     "maxSeats": "12"
   },
   {
     "id": 4,
-    "title": "terzo evento",
-    "description": "terzo evento",
-    "date": "domani",
+    "title": "quarto evento",
+    "description": "quarto evento",
+    "date": "2023-05-11",
     "maxSeats": "12"
   }
 ]
