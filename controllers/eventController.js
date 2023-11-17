@@ -40,11 +40,11 @@ function store(req, res) {
     }
 
 function show(req,res){
-    const eventSlug = req.params.slug;
-    const event = eventArray.find((event) => event.slug == eventSlug);
+    const eventId = req.params.id;
+    const event = eventArray.find((event) => event.id == eventId);
 
     if (!event) {
-        res.status(404).send(`Evento con slug ${eventSlug} non trovato`);
+        res.status(404).send(`Evento con slug ${eventId} non trovato`);
         return;
       }
     
@@ -53,11 +53,11 @@ function show(req,res){
 }
 function update(req,res){
 
-    const eventSlug = req.params.slug;
-    const event = eventArray.find((event) => event.slug == eventSlug);
+    const eventId = req.params.id;
+    const event = eventArray.find((event) => event.id == eventId);
 
     if (!event) {
-        res.status(404).send(`Evento con slug ${eventSlug} non trovato`);
+        res.status(404).send(`Evento con slug ${eventId} non trovato`);
         return;
       }
     

@@ -1,4 +1,7 @@
 [{
-    "title": "primo evento",
-    "slug" : "primo-evento"
+    "id" : 1,
+    "title" : "primo evento",
+    "description" : "primo evento",
+    "date" : "29 Febbraio 2024",
+    "maxSeats" : 10
 }]

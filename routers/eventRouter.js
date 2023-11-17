@@ -6,11 +6,11 @@ const eventController = require("../controllers/eventController");
 // funzione index
 router.get("/", eventController.index)
 //funzione show
-router.get("/:slug", eventController.show)
+router.get("/:id", eventController.show)
 //funzione store
 router.post("/", eventController.store)
 //funzione update
-router.put("/:slug", eventController.update)
+router.put("/:id", eventController.update)
 
 
 
