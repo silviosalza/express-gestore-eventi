@@ -20,6 +20,23 @@ function index(req,res){
       return;
     }
 
+    function store(req, res) {
+        res.format({
+            html: () => {
+              
+              res.type("html").send("store funziona");
+            },
+            json: () => {
+              res.type("json").send("store funziona");
+            },
+            default: () => {
+              res.status(406).send("Not Acceptable");
+            },
+          });
+          return;
+      }
+
     module.exports = {
         index,
+        store
       };
