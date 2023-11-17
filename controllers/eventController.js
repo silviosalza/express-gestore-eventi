@@ -9,8 +9,8 @@ function index(req,res){
 
     res.format({
         default: () => {
-            Event.getEvent();
-            res.type("html").send("Index funziona");
+            events = Event.getEvent();
+            res.json(events);
         },
       });
       return;
@@ -25,7 +25,7 @@ function store(req, res) {
         
             try{
                 Event.saveEvent(newEvent);
-                res.send('Evento salvato')
+                res.json(newEvent)
             } catch(error){
                 res.send("Errore durante il salvataggio")
             }
