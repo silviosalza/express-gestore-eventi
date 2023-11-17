@@ -2,6 +2,7 @@ const path = require("path");
 const { log } = require("console");
 const fs = require("fs");
 const eventArray = require("../db/db.json");
+const Event = require('../models/eventModel')
 
 
 function index(req,res){
