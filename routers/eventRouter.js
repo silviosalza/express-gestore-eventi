@@ -9,6 +9,8 @@ router.get("/", eventController.index)
 router.get("/:slug", eventController.show)
 //funzione store
 router.post("/", eventController.store)
+//funzione update
+router.put("/:slug", eventController.update)
 
 
 

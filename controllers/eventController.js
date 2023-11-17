@@ -51,8 +51,18 @@ function show(req,res){
 }
 function update(req,res){
 
+    const eventSlug = req.params.slug;
+    const event = eventArray.find((event) => event.slug == eventSlug);
+
+    if (!event) {
+        res.status(404).send(`Evento con slug ${eventSlug} non trovato`);
+        return;
+      }
+    
+      res.json(event);
+
         
-          return;
+          
         }
 
 
