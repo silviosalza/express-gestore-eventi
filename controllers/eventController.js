@@ -24,19 +24,32 @@ function index(req,res){
 
 
 function store(req, res) {
-        res.format({
-            html: () => {
+
+    const eventData = req.body;
+    const newEvent = new Event(eventData.id, eventData.title, eventData.description, eventData.date, eventData.maxSeats)
+
+    try{
+        Event.saveEvent(newEvent);
+        res.send('Evento salvato')
+    } catch(error){
+        res.send("Errore durante il salvataggio")
+    }
+    
+
+
+        // res.format({
+        //     html: () => {
               
-              res.type("html").send("store funziona");
-            },
-            json: () => {
-              res.type("json").send("store funziona");
-            },
-            default: () => {
-              res.status(406).send("Not Acceptable");
-            },
-          });
-          return;
+        //       res.type("html").send("store funziona");
+        //     },
+        //     json: () => {
+        //       res.type("json").send("store funziona");
+        //     },
+        //     default: () => {
+        //       res.status(406).send("Not Acceptable");
+        //     },
+        //   });
+
     }
 
 function show(req,res){
@@ -61,11 +74,7 @@ function update(req,res){
         return;
       }
     
-      res.json(event);
-
-        
-          
-        }
+      res.json(event);}
 
 
 

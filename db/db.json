@@ -1,7 +1,16 @@
-[{
-    "id" : 1,
-    "title" : "primo evento",
-    "description" : "primo evento",
-    "date" : "29 Febbraio 2024",
-    "maxSeats" : 10
-}]
+[
+  {
+    "id": 1,
+    "title": "primo evento",
+    "description": "primo evento",
+    "date": "29 Febbraio 2024",
+    "maxSeats": 10
+  },
+  {
+    "id": 2,
+    "title": "secondo evento",
+    "description": "secondo evento",
+    "date": "29 Febbraio 2024",
+    "maxSeats": 10
+  }
+]
